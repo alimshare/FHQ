@@ -1,9 +1,10 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Api;
 
 use Illuminate\Http\Request;
 use App\Repositories\ISantriRepository as BaseCrud;
+use App\Http\Controllers\Controller;
 
 class SantriController extends Controller
 {

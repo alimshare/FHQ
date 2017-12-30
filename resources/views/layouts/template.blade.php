@@ -120,5 +120,7 @@
       });
   </script>
 
+  @yield('footer-script', '')
+
 </body>
 </html>

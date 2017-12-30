@@ -1,9 +1,10 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Api;
 
 use Illuminate\Http\Request;
 use App\Repositories\ILevelRepository as BaseCrud;
+use App\Http\Controllers\Controller;
 
 class LevelController extends Controller
 {

@@ -1,9 +1,10 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Api;
 
 use Illuminate\Http\Request;
 use App\Repositories\IKelasRepository as BaseCrud;
+use App\Http\Controllers\Controller;
 
 class KelasController extends Controller
 {
