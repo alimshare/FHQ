@@ -90,7 +90,7 @@ class SemesterController extends Controller
      */
     public function destroy($id)
     {
-        $object = model::find($id);
+        $object = $this->crud->get($id);
         if ($object != "") {
 
             $status = $object->delete(); 

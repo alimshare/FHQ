@@ -14,5 +14,4 @@ class Kelas extends Model
 	use SoftDeletes;
 	
     protected 	$table 		= "kelas";
-    // protected	$visible 	= array("id","nama","deskripsi","tanggal_mulai","tanggal_selesai");
 }

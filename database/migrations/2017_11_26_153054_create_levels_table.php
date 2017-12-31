@@ -15,8 +15,9 @@ class CreateLevelsTable extends Migration
     {
         Schema::create('level', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('nama');
-            $table->string('deskripsi');
+            $table->string('nama',60);
+            $table->text('deskripsi');
+            $table->double('biaya')->default(0);
             $table->timestamps();
             $table->softDeletes();
         });

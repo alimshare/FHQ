@@ -14,7 +14,6 @@ class Peserta extends Model
 	use SoftDeletes;
 	
     protected 	$table 		= "peserta";
-    // protected	$visible 	= array("id","nama","deskripsi","tanggal_mulai","tanggal_selesai");
 
     public function santri(){
     	return $this->belongTo('App\Model\Santri','id','id_santri');

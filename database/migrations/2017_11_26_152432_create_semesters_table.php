@@ -15,8 +15,8 @@ class CreateSemestersTable extends Migration
     {
         Schema::create('semester', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('nama');
-            $table->string('deskripsi')->nullable();
+            $table->string('nama',60);
+            $table->text('deskripsi')->nullable();
             $table->date('tanggal_mulai');
             $table->date('tanggal_selesai');
             $table->string('status',10)->default('');

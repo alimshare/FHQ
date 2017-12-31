@@ -14,5 +14,4 @@ class Pengajar extends Model
 	use SoftDeletes;
 	
     protected 	$table 		= "pengajar";
-    // protected	$visible 	= array("id","nama","deskripsi","tanggal_mulai","tanggal_selesai");
 }

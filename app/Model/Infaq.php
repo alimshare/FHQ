@@ -14,5 +14,4 @@ class Infaq extends Model
 	use SoftDeletes;
 	
     protected 	$table 		= "infaq";
-    // protected	$visible 	= array("id","nama","deskripsi","tanggal_mulai","tanggal_selesai");
 }

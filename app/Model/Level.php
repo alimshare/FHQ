@@ -14,5 +14,5 @@ class Level extends Model
 	use SoftDeletes;
 	
     protected 	$table 		= "level";
-    // protected	$visible 	= array("id","nama","deskripsi","tanggal_mulai","tanggal_selesai");
+    
 }

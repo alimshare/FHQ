@@ -18,7 +18,7 @@ class CreateKelasTable extends Migration
             $table->integer('id_semester');
             $table->integer('id_level');
             $table->integer('id_pengajar');
-            $table->string('hari');
+            $table->string('hari',15);
             $table->enum('jenis_kelamin', ['L', 'P', 'LP']);
             $table->timestamps();
             $table->softDeletes();

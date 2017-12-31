@@ -22,7 +22,10 @@ Route::get('/semester/add', 'UISemesterController@add');
 Route::get('/semester/view/{id?}', 'UISemesterController@view');
 Route::get('/semester/edit/{id?}', 'UISemesterController@edit');
 
-Route::get('level', 'UILevelController@index');
+Route::get('/level', 'UILevelController@index');
+Route::get('/level/add', 'UILevelController@add');
+Route::get('/level/view/{id?}', 'UILevelController@view');
+Route::get('/level/edit/{id?}', 'UILevelController@edit');
 
 Route::get('santri', 'UISantriController@index');
 

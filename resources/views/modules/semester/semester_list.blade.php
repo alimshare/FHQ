@@ -45,7 +45,9 @@
                           <td>
                             <a href="{{ url('/semester/view/'.$value->id) }}" class="btn btn-outline-primary btn-sm">View</a>
                             <a href="{{ url('/semester/edit/'.$value->id) }}" class="btn btn-success btn-sm">Edit</a>
-                            <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#dangerModal">Delete</button>
+                            @if ($value->status == '')
+                              <button type="button" class="btn btn-danger btn-sm btnDelete" data-toggle="modal" data-target="#dangerModal" data-id="{{ $value->id }}">Delete</button>
+                            @endif
                           </td>
                         </tr>
                       @endforeach
@@ -68,25 +70,62 @@
 
       <div class="modal fade" id="dangerModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-danger" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h4 class="modal-title">Confirmation Delete</h4>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">×</span>
-              </button>
+          <form id="form">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h4 class="modal-title">Confirmation Delete</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">×</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <p>Are you sure want to delete this data ?</p>
+                <input type="hidden" name="id" id="id">
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal" id="btnClose">Close</button>
+                <button type="submit" class="btn btn-danger" id="btnDelete">Delete</button>
+              </div>
             </div>
-            <div class="modal-body">
-              <p>Are you sure want to delete this data ?</p>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-danger">Delete</button>
-            </div>
-          </div>
-          <!-- /.modal-content -->
+            <!-- /.modal-content -->
+          </form>
         </div>
         <!-- /.modal-dialog -->
       </div>
       <!-- /.modal -->
 
+@endsection
+
+
+@section('footer-script')
+      <script type="text/javascript">
+
+        $(".btnDelete").click(function(){
+          var id = $(this).attr('data-id');
+          $("#id").val(id);
+          $("#btnClose").focus();
+        });
+        
+        $("#form").on('submit', function(e){
+            e.preventDefault();            
+            var id  = $("#id").val();
+            
+            var objRequest = {};
+
+            $.ajax({
+               type:'DELETE',
+               url:'{{ url("api/semester/remove") }}/'+id,
+               data: JSON.stringify(objRequest),
+               success:function(response){
+                  if (response.errorCode == "00") {
+                    alert('success');
+                    window.location.href = "{{ url('semester') }}";
+                  } else {
+                    console.log(response.errorCode + " : "+ response.message);
+                  }
+               }
+            });
+        });
+
+      </script>
 @endsection
