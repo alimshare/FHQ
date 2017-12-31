@@ -15,7 +15,7 @@
               <li class="nav-item"><a class="nav-link" href="pengajar"><i class="icon-user"></i> Pengajar </a></li>
               <li class="nav-item"><a class="nav-link" href="staff"><i class="icon-user"></i> Staff </a></li>
               <li class="nav-item"><a class="nav-link" href="level"><i class="icon-layers"></i> Level </a></li>
-              <li class="nav-item"><a class="nav-link" href="/semester"><i class="icon-star"></i> Semester </a></li>
+              <li class="nav-item"><a class="nav-link" href="semester"><i class="icon-star"></i> Semester </a></li>
               <li class="nav-item"><a class="nav-link" onclick="alert('coming soon')"><i class="icon-map"></i> Lokasi </a></li>
             </ul>
           </li>

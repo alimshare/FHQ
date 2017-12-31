@@ -18,16 +18,18 @@ class UISantriController extends Controller
         $list = $this->crud->all();    
         return view('modules.santri.santri_list')->with('list',$list);
     }
-
-    public function view($id){
-
-    }
-
+    
     public function add(){
         return view('modules.santri.santri_add');
     }
 
-    public function edit(){
+    public function view($id){
+        $object = $this->crud->get($id);
+        return view('modules.santri.santri_view')->with('object', $object);
+    }
 
+    public function edit($id){
+        $object = $this->crud->get($id);
+        return view('modules.santri.santri_edit')->with('object', $object);
     }
 }

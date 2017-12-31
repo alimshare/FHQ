@@ -40,6 +40,9 @@
     }
   </style>
 
+    <!-- iCheck for checkboxes and radio inputs -->
+    <link rel="stylesheet" href="{{ url('/') }}/dist/vendors/iCheck/all.css">
+
 </head>
 
 <!-- BODY options, add following classes to body to change options
@@ -114,9 +117,19 @@
   <script src="{{ url('/') }}/dist/vendors/dataTables/js/jquery.dataTables.min.js"></script>
   <script src="{{ url('/') }}/dist/vendors/dataTables/js/DataTablesBS4.js"></script>
 
+  <!-- iCheck 1.0.1 -->
+  <script src="{{ url('/') }}/dist/vendors/iCheck/icheck.min.js"></script>
+
   <script type="text/javascript">
       $(document).ready(function(){
           $('.datatable').DataTable();
+
+          //Flat red color scheme for iCheck
+          $('input[type="checkbox"].flat-blue, input[type="radio"].flat-blue').iCheck({
+              checkboxClass: 'icheckbox_square-blue',
+              radioClass: 'iradio_square-blue',
+              increaseArea: '20%' // optional
+          });
       });
   </script>
 

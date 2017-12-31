@@ -28,6 +28,9 @@ Route::get('/level/view/{id?}', 'UILevelController@view');
 Route::get('/level/edit/{id?}', 'UILevelController@edit');
 
 Route::get('santri', 'UISantriController@index');
+Route::get('/santri/add', 'UISantriController@add');
+Route::get('/santri/view/{id?}', 'UISantriController@view');
+Route::get('/santri/edit/{id?}', 'UISantriController@edit');
 
 Route::get('pengajar', 'UIPengajarController@index');
 
