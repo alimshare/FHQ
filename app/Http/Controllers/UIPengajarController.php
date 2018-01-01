@@ -18,16 +18,18 @@ class UIPengajarController extends Controller
         $list = $this->crud->all();    
         return view('modules.pengajar.pengajar_list')->with('list',$list);
     }
-
-    public function view($id){
-
-    }
-
+    
     public function add(){
         return view('modules.pengajar.pengajar_add');
     }
 
-    public function edit(){
+    public function view($id){
+        $object = $this->crud->get($id);
+        return view('modules.pengajar.pengajar_view')->with('object', $object);
+    }
 
+    public function edit($id){
+        $object = $this->crud->get($id);
+        return view('modules.pengajar.pengajar_edit')->with('object', $object);
     }
 }
