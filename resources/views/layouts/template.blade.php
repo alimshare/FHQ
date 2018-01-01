@@ -30,7 +30,8 @@
   <link href="{{ url('/') }}/dist/css/style.css" rel="stylesheet">
   <!-- Styles required by this views -->
 
-  <link rel="stylesheet" href="{{ url('/') }}/dist/vendors/datatables/css/dataTables.bootstrap.min.css"/>
+  <!-- <link rel="stylesheet" href="{{ url('/') }}/dist/vendors/datatables/css/jquery.dataTables.min.css"/> -->
+  <link rel="stylesheet" href="{{ url('/') }}/dist/vendors/datatables/css/dataTables.bootstrap.css"/>
   <style type="text/css">
     .table-bordered thead th, .table-bordered thead td {
       border-bottom-width: 1px; 
