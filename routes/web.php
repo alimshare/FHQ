@@ -38,6 +38,9 @@ Route::get('/pengajar/view/{id?}', 'UIPengajarController@view');
 Route::get('/pengajar/edit/{id?}', 'UIPengajarController@edit');
 
 Route::get('kelas', 'UIKelasController@index');
+Route::get('/kelas/add', 'UIKelasController@add');
+Route::get('/kelas/view/{id?}', 'UIKelasController@view');
+Route::get('/kelas/edit/{id?}', 'UIKelasController@edit');
 
 Route::get('peserta', 'UIPesertaController@index');
 

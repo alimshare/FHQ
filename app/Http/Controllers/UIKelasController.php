@@ -18,16 +18,18 @@ class UIKelasController extends Controller
         $list = $this->crud->all();    
         return view('modules.kelas.kelas_list')->with('list',$list);
     }
-
-    public function view($id){
-
-    }
-
+    
     public function add(){
         return view('modules.kelas.kelas_add');
     }
 
-    public function edit(){
+    public function view($id){
+        $object = $this->crud->get($id);
+        return view('modules.kelas.kelas_view')->with('object', $object);
+    }
 
+    public function edit($id){
+        $object = $this->crud->get($id);
+        return view('modules.kelas.kelas_edit')->with('object', $object);
     }
 }

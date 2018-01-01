@@ -14,4 +14,19 @@ class Kelas extends Model
 	use SoftDeletes;
 	
     protected 	$table 		= "kelas";
+
+    public function getSemester()
+    {
+    	return Semester::find($this->id_semester);
+    }
+
+    public function getLevel()
+    {
+    	return Level::find($this->id_level);
+    }
+
+    public function getPengajar()
+    {
+    	return Pengajar::find($this->id_pengajar);
+    }
 }
