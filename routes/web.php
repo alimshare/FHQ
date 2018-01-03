@@ -48,3 +48,6 @@ Route::get('/peserta/view/{id?}', 'UIPesertaController@view');
 Route::get('/peserta/edit/{id?}', 'UIPesertaController@edit');
 
 Route::get('infaq', 'UIInfaqController@index');
+Route::get('/infaq/add', 'UIInfaqController@add');
+Route::get('/infaq/view/{id?}', 'UIInfaqController@view');
+Route::get('/infaq/edit/{id?}', 'UIInfaqController@edit');

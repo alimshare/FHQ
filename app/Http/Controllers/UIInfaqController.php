@@ -19,15 +19,17 @@ class UIInfaqController extends Controller
         return view('modules.infaq.infaq_list')->with('list',$list);
     }
 
-    public function view($id){
-
-    }
-
     public function add(){
         return view('modules.infaq.infaq_add');
     }
 
-    public function edit(){
+    public function view($id){
+        $object = $this->crud->get($id);
+        return view('modules.infaq.infaq_view')->with('object', $object);
+    }
 
+    public function edit($id){
+        $object = $this->crud->get($id);
+        return view('modules.infaq.infaq_edit')->with('object', $object);
     }
 }

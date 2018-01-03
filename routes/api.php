@@ -58,5 +58,4 @@ Route::delete('kelas/remove/{id?}','Api\KelasController@destroy');
 Route::get('infaq','Api\InfaqController@index');
 Route::get('infaq/{id?}','Api\InfaqController@show');
 Route::post('infaq/add','Api\InfaqController@store');
-Route::put('infaq/update/{id?}','Api\InfaqController@update');
-Route::delete('infaq/remove/{id?}','Api\InfaqController@destroy');
+// Route::delete('infaq/remove/{id?}','Api\InfaqController@destroy');
