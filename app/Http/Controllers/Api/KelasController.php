@@ -104,4 +104,14 @@ class KelasController extends Controller
             return response()->json(['errorCode'=>'03','message' => 'not found']);
         }
     }
+
+    /**
+     * Display a listing of the resource with information details.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function detail(){
+        $list = $this->crud->detail();
+        return  response()->json($list);
+    }
 }

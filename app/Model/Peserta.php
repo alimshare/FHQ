@@ -15,13 +15,14 @@ class Peserta extends Model
 	
     protected 	$table 		= "peserta";
 
-    public function santri(){
-    	return $this->belongTo('App\Model\Santri','id','id_santri');
-    }
-    
-    public function kelas(){
-    	return $this->belongTo('App\Model\Kelas','id','id_kelas');
+    public function getKelas()
+    {
+        return Kelas::find($this->id_kelas);
     }
 
+    public function getSantri()
+    {
+        return Santri::find($this->id_santri);
+    }
 
 }

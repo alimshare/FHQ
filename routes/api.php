@@ -47,6 +47,8 @@ Route::post('level/add','Api\LevelController@store');
 Route::put('level/update/{id?}','Api\LevelController@update');
 Route::delete('level/remove/{id?}','Api\LevelController@destroy');
 
+Route::get('kelas/detail','Api\KelasController@detail');
+
 Route::get('kelas','Api\KelasController@index');
 Route::get('kelas/{id?}','Api\KelasController@show');
 Route::post('kelas/add','Api\KelasController@store');

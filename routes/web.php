@@ -43,5 +43,8 @@ Route::get('/kelas/view/{id?}', 'UIKelasController@view');
 Route::get('/kelas/edit/{id?}', 'UIKelasController@edit');
 
 Route::get('peserta', 'UIPesertaController@index');
+Route::get('/peserta/add', 'UIPesertaController@add');
+Route::get('/peserta/view/{id?}', 'UIPesertaController@view');
+Route::get('/peserta/edit/{id?}', 'UIPesertaController@edit');
 
 Route::get('infaq', 'UIInfaqController@index');
