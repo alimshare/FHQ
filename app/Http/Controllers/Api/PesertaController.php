@@ -106,4 +106,14 @@ class PesertaController extends Controller
             return response()->json(['errorCode'=>'03','message' => 'not found']);
         }
     }
+
+    /**
+     * Get list peserta by nis
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function getPesertaByNIS($nis) {
+        $list = $this->crud->getPesertaByNIS($nis);        
+        return  response()->json($list);        
+    }
 }

@@ -26,7 +26,9 @@
                     <thead>
                       <tr>
                         <th>Tanggal</th>
+                        <th>NIS</th>
                         <th>Peserta</th>
+                        <th>Kelas</th>
                         <th>Nominal</th>
                         <th>Action</th>
                       </tr>
@@ -36,7 +38,9 @@
                       @foreach ( $list as $key => $value )
                         <tr>
                           <td>{{ $value['tanggal'] }} </td>
+                          <td>{{ $value->getPeserta()->getSantri()->nomor_induk }}</td>
                           <td>{{ $value->getPeserta()->getSantri()->nama }}</td>
+                          <td>{{ $value->getPeserta()->getKelas()->getLevel()->nama }}</td>
                           <td>{{ number_format($value['nominal']) }}</td>
                           <td>
                             <a href="{{ url('/infaq/view/'.$value->id) }}" class="btn btn-outline-primary btn-sm">View</a>
