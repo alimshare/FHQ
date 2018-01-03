@@ -78,9 +78,12 @@
           <div class="card text-white bg-primary py-5 d-md-down-none" style="width:44%">
             <div class="card-body text-center">
               <div>
-                <h2>Sign up</h2>
+                <!-- <h2>Sign up</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                <button type="button" class="btn btn-primary active mt-3">Register Now!</button>
+                <button type="button" class="btn btn-primary active mt-3">Register Now!</button> -->
+
+                <h2>FHQ</h2>
+                <p style="margin-top: 15px">Rasullullah shallallahu 'alaihi wa sallam bersabda, <strong><em>"Sebaik-baik kalian adalah yang belajar Al-Qur'an dan mengajarkannya"</em></strong> (HR. Bukhari)</p>
               </div>
             </div>
           </div>

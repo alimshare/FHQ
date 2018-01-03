@@ -145,7 +145,7 @@
                   var current_level = {{ $object->id_level }};
                   $.each(response, function(index, value){
                     var selected = ( current_level == value.id ? 'selected' : '');                    
-                    opts += '<option value="'+ value.id +'" '+selected+'>'+ value.nama +' - '+ value.deskripsi +'</option>';
+                    opts += '<option value="'+ value.id +'" '+selected+'>'+ value.nama +'</option>';
                   });
 
                   $('#id_level').html(opts);

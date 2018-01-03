@@ -138,7 +138,7 @@
                 if (response.length) {
                   var opts =  '<option value="" selected="" disabled=""> -- Pilih level -- </option>';
                   $.each(response, function(index, value){
-                    opts += '<option value="'+ value.id +'">'+ value.nama +' - '+ value.deskripsi +'</option>';
+                    opts += '<option value="'+ value.id +'">'+ value.nama +'</option>';
                   });
 
                   $('#id_level').html(opts);

@@ -37,7 +37,10 @@
             <a class="nav-link" href="widgets.html"><i class="icon-settings"></i> Settings </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="widgets.html"><i class="icon-logout"></i> Logout </a>
+            <a class="nav-link" href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();"><i class="icon-logout"></i> Logout </a>
+            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                {{ csrf_field() }}
+            </form>
           </li>
 
 
