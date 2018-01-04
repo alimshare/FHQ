@@ -19,6 +19,7 @@
                 <div class="card-header">
                   <i class="fa fa-align-justify"></i> List Kelas
                   <div class="pull-right">
+                    <a href="{{ url('kelas/export') }}" class="btn btn-success" title="Export CSV"> <i class="fa fa-file-excel-o"></i> Export</a>
                     <a href="{{ url('kelas/add') }}" class="btn btn-primary"> <i class="fa fa-plus"></i> Add</a>                    
                   </div>
                 </div>

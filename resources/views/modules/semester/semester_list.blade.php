@@ -17,6 +17,7 @@
                 <div class="card-header">
                   <i class="fa fa-align-justify"></i> List Semester
                   <div class="pull-right">
+                    <a href="{{ url('semester/export') }}" class="btn btn-success" title="Export CSV"> <i class="fa fa-file-excel-o"></i> Export</a>
                     <a href="semester/add" class="btn btn-primary"> <i class="fa fa-plus"></i> Add</a>
                   </div>
                 </div>
