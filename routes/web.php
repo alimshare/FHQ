@@ -31,6 +31,7 @@ Route::get('santri', 'UISantriController@index');
 Route::get('/santri/add', 'UISantriController@add');
 Route::get('/santri/view/{id?}', 'UISantriController@view');
 Route::get('/santri/edit/{id?}', 'UISantriController@edit');
+Route::get('santri/export', 'UISantriController@export');
 
 Route::get('pengajar', 'UIPengajarController@index');
 Route::get('/pengajar/add', 'UIPengajarController@add');
