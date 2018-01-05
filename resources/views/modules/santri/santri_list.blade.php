@@ -1,5 +1,6 @@
 @extends('layouts.template')
 
+
 @section('content')
       <!-- Breadcrumb -->
       <ol class="breadcrumb">
@@ -23,7 +24,7 @@
                 </div>
                 <div class="card-body">
                 
-                  <table class="table table-responsive-sm table-bordered datatable">
+                  <table class="table table-responsive-sm table-bordered table-sm" id="table_santri" width="100%">
                     <thead>
                       <tr>
                         <th>NIS</th>
@@ -32,30 +33,6 @@
                         <th>Action</th>
                       </tr>
                     </thead>
-                    <tbody>
-
-                      @foreach ( $list as $key => $value )
-                        <tr>
-                          <td>{{ $value['nomor_induk'] }} </td>
-                          <td>{{ $value['nama'] }}</td>
-                          <td>
-                            @if ($value->jenis_kelamin == 'L')
-                              Ikhwan
-                            @elseif ($value->jenis_kelamin == 'P')
-                              Akhwat
-                            @endif 
-                          </td>
-                          <td>
-                            <a href="{{ url('/santri/view/'.$value->id) }}" class="btn btn-outline-primary btn-sm">View</a>
-                            <a href="{{ url('/santri/edit/'.$value->id) }}" class="btn btn-success btn-sm">Edit</a>
-                            @if ($value->status == '')
-                              <button type="button" class="btn btn-danger btn-sm btnDelete" data-toggle="modal" data-target="#dangerModal" data-id="{{ $value->id }}">Delete</button>
-                            @endif
-                          </td>
-                        </tr>
-                      @endforeach
-
-                    </tbody>
                   </table>
 
                 </div>
@@ -101,34 +78,47 @@
 
 
 @section('footer-script')
-      <script type="text/javascript">
+<script type="text/javascript">
+  $(function(){
+    $('#table_santri').DataTable({
+        processing: true,
+        serverSide: true,
+        ajax: '{{ url('santri/datatables') }}',
+        columns: [
+          { data: 'nomor_induk', name: 'nomor_induk'},
+          { data: 'nama', name: 'nama'},
+          { data: 'jenis_kelamin', name: 'jenis_kelamin', searchable: false },
+          { data: 'action', name: 'action', orderable: false, searchable: false}
+        ]
+    });
+  });
 
-        $(".btnDelete").click(function(){
-          var id = $(this).attr('data-id');
-          $("#id").val(id);
-          $("#btnClose").focus();
-        });
-        
-        $("#form").on('submit', function(e){
-            e.preventDefault();            
-            var id  = $("#id").val();
-            
-            var objRequest = {};
+  $(".btnDelete").click(function(){
+    var id = $(this).attr('data-id');
+    $("#id").val(id);
+    $("#btnClose").focus();
+  });
+  
+  $("#form").on('submit', function(e){
+      e.preventDefault();            
+      var id  = $("#id").val();
+      
+      var objRequest = {};
 
-            $.ajax({
-               type:'DELETE',
-               url:'{{ url("api/santri/remove") }}/'+id,
-               data: JSON.stringify(objRequest),
-               success:function(response){
-                  if (response.errorCode == "00") {
-                    alert('success');
-                    window.location.href = "{{ url('santri') }}";
-                  } else {
-                    console.log(response.errorCode + " : "+ response.message);
-                  }
-               }
-            });
-        });
+      $.ajax({
+         type:'DELETE',
+         url:'{{ url("api/santri/remove") }}/'+id,
+         data: JSON.stringify(objRequest),
+         success:function(response){
+            if (response.errorCode == "00") {
+              alert('success');
+              window.location.href = "{{ url('santri') }}";
+            } else {
+              console.log(response.errorCode + " : "+ response.message);
+            }
+         }
+      });
+  });
 
-      </script>
+</script>
 @endsection
