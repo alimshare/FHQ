@@ -44,6 +44,7 @@
     <!-- iCheck for checkboxes and radio inputs -->
     <link rel="stylesheet" href="{{ url('/') }}/dist/vendors/iCheck/all.css">
 
+  @yield('head-script')
 </head>
 
 <!-- BODY options, add following classes to body to change options
