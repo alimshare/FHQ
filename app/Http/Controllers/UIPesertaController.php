@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Repositories\IPesertaRepository as BaseCrud;
 use Excel;
 
@@ -26,7 +25,8 @@ class UIPesertaController extends Controller
 
     public function view($id){
         $object = $this->crud->get($id);
-        return view('modules.peserta.peserta_view')->with('object', $object);
+        $listInfaq = $object->getInfaq();
+        return view('modules.peserta.peserta_view')->with('object', $object)->with('list', $listInfaq);
     }
 
     public function edit($id){

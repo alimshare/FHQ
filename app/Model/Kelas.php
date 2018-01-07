@@ -29,4 +29,9 @@ class Kelas extends Model
     {
     	return Pengajar::find($this->id_pengajar);
     }
+
+    public function getPeserta()
+    {
+        return Peserta::where('id_kelas','=',$this->id)->get();
+    }
 }

@@ -8,6 +8,7 @@ use App\Repositories\impl\CRUDRepository;
 class KelasRepository extends CRUDRepository implements IKelasRepository 
 {
     protected $modelClz = 'App\Model\Kelas';
+    protected $modelClzPeserta = 'App\Model\Peserta';
 
     public function detail() {
         $list = call_user_func([$this->modelClz,'all']);
@@ -17,6 +18,12 @@ class KelasRepository extends CRUDRepository implements IKelasRepository
         	$object['pengajar'] = call_user_func([$object,'getPengajar']);
         }
         return $list;        
+    }
+
+    public function getListPeserta($id_kelas){
+        $object = new $this->modelClzPeserta;
+        $listPeserta = $object::where('id_kelas','=',$id_kelas)->get();
+        return $listPeserta;
     }
 
 }

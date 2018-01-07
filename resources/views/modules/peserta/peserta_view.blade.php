@@ -12,7 +12,7 @@
         <div class="animated fadeIn">
           
           <div class="row">
-            <div class="col-lg-6">
+            <div class="col-lg-12">
               <div class="card">
                 <div class="card-header">
                   <strong>Peserta</strong>
@@ -21,7 +21,7 @@
                 <div class="card-body">
                   <div class="row">
 
-                    <div class="col-sm-12">
+                    <div class="col-lg-6">
 
                       <table class="table table-bordered">
                         <tr>
@@ -42,6 +42,33 @@
                         </tr>
                       </table>
 
+                    </div>
+
+                    <div class="col-lg-6">
+                      <h4>Infaq</h4>
+
+                      <table class="table table-bordered table-sm">
+                        <tr style="background-color: #f0f3f5; text-align: center;">
+                          <th>TGL</th>
+                          <th>Nominal</th>
+                          <th>Action</th>
+                        </tr>
+                        @php $total = 0 @endphp
+                        @foreach ( $list as $key => $value )
+                          @php $total += $value->nominal @endphp
+                          <tr>
+                            <td>{{ $value->tanggal }} </td>
+                            <td>{{ number_format($value->nominal) }}</td>
+                            <td>
+                              <a href="{{ url('/infaq/view/'.$value->id) }}" class="btn btn-outline-primary btn-sm">View</a>
+                            </td>
+                          </tr>
+                        @endforeach
+                        <tr>
+                          <th>TOTAL</th>
+                          <td colspan="2">{{ number_format($total) }}</td>
+                        </tr>
+                      </table>
                     </div>
 
                   </div>

@@ -25,8 +25,9 @@ class UIKelasController extends Controller
     }
 
     public function view($id){
-        $object = $this->crud->get($id);
-        return view('modules.kelas.kelas_view')->with('object', $object);
+        $object  = $this->crud->get($id);
+        $listPeserta    = $object->getPeserta();
+        return view('modules.kelas.kelas_view')->with('object', $object)->with('list',$listPeserta);
     }
 
     public function edit($id){

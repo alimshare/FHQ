@@ -25,4 +25,9 @@ class Peserta extends Model
         return Santri::find($this->id_santri);
     }
 
+    public function getInfaq()
+    {
+        return Infaq::where('id_peserta','=',$this->id)->get();        
+    }
+
 }

@@ -6,5 +6,6 @@ use App\Repositories\ICRUDRepository;
 
 interface IKelasRepository extends ICRUDRepository
 {
-	public function detail();	
+	public function detail();
+	public function getListPeserta($id_kelas);	
 }

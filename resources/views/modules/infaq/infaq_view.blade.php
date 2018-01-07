@@ -29,6 +29,10 @@
                           <td>{{ $object->tanggal }}</td>
                         </tr>
                         <tr>
+                          <th>Kelas</th>
+                          <td>{{ $object->getPeserta()->getKelas()->getLevel()->nama .' - '. $object->getPeserta()->getKelas()->getPengajar()->nama }}</td>
+                        </tr>
+                        <tr>
                           <th>Peserta</th>
                           <td>{{ $object->getPeserta()->getSantri()->nomor_induk .' - '. $object->getPeserta()->getSantri()->nama }}</td>
                         </tr>

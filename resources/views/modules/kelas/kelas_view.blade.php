@@ -12,7 +12,7 @@
         <div class="animated fadeIn">
           
           <div class="row">
-            <div class="col-lg-6">
+            <div class="col-lg-12">
               <div class="card">
                 <div class="card-header">
                   <strong>Kelas</strong>
@@ -21,7 +21,7 @@
                 <div class="card-body">
                   <div class="row">
 
-                    <div class="col-sm-12">
+                    <div class="col-lg-6">
 
                       <table class="table table-bordered">
                         <tr>
@@ -42,6 +42,27 @@
                         </tr>
                       </table>
 
+                    </div>
+
+                    <div class="col-lg-6">
+                      <h4>Peserta</h4>
+
+                      <table class="table table-bordered table-sm">
+                        <tr style="background-color: #f0f3f5; text-align: center;">
+                          <th>NIS</th>
+                          <th>Nama</th>
+                          <th>Action</th>
+                        </tr>
+                        @foreach ( $list as $key => $value )
+                          <tr>
+                            <td>{{ $value->getSantri()->nomor_induk or '-' }} </td>
+                            <td>{{ $value->getSantri()->nama or '-' }} </td>
+                            <td>
+                              <a href="{{ url('/peserta/view/'.$value->id) }}" class="btn btn-outline-primary btn-sm">View</a>
+                            </td>
+                          </tr>
+                        @endforeach
+                      </table>
                     </div>
 
                   </div>
