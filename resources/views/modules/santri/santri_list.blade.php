@@ -24,7 +24,7 @@
                 </div>
                 <div class="card-body">
                 
-                  <table class="table table-responsive-sm table-bordered table-sm" id="table_santri" width="100%">
+                  <table class="table table-responsive-sm table-bordered table-sm" id="tbl" width="100%">
                     <thead>
                       <tr>
                         <th>NIS</th>
@@ -80,7 +80,7 @@
 @section('footer-script')
 <script type="text/javascript">
   $(function(){
-    $('#table_santri').DataTable({
+    $('#tbl').DataTable({
         processing: true,
         serverSide: true,
         ajax: '{{ url('santri/datatables') }}',

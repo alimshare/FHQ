@@ -76,7 +76,7 @@
 
                 </div>
                 <div class="card-footer">
-                  <a href="{{ url('peserta') }}" class="btn btn-outline-secondary pull-left" id="btnCancel"> <i class="icon-arrow-left"></i> Back</a>
+                  <a href="{{ URL::previous() }}" class="btn btn-outline-secondary pull-left" id="btnCancel"> <i class="icon-arrow-left"></i> Back</a>
                   <a href="{{ url('peserta/edit/'.$object->id) }}" class="btn btn-outline-success pull-right" id="btnSave"> <i class="fa fa-pencil"></i> Edit</a>
                 </div>
               </div>

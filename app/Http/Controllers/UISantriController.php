@@ -17,7 +17,7 @@ class UISantriController extends Controller
     }
 
     public function index(){
-        return view('modules.santri.santri_list');//->with('list',$list);
+        return view('modules.santri.santri_list');
     }
 
     public function datatables(){
