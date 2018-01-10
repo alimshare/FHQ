@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Repositories\IPengajarRepository as BaseCrud;
 use Excel;
+use DataTables;
 
 class UIPengajarController extends Controller
 {
@@ -18,6 +19,22 @@ class UIPengajarController extends Controller
     public function index(){
         $list = $this->crud->all();    
         return view('modules.pengajar.pengajar_list')->with('list',$list);
+    }
+
+    public function datatables(){
+        $list = $this->crud->all();
+
+        return Datatables::of($list)
+        ->editColumn('jenis_kelamin', function($list){
+            return $list->jenis_kelamin == 'L' ? 'Ikhwan' : 'Akhwat';
+        })
+        ->addColumn('action', function($list){
+            return '<a href="'. url('/pengajar/view/'.$list->id) .'" class="btn btn-outline-primary btn-sm">View</a>
+                    <a href="'. url('/pengajar/edit/'.$list->id) .'" class="btn btn-success btn-sm">Edit</a>
+                    <button type="button" class="btn btn-danger btn-sm btnDelete" data-toggle="modal" data-target="#dangerModal" data-id="'. $list->id .'">Delete</button>
+                  ';
+        })
+        ->make(true);
     }
     
     public function add(){

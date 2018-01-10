@@ -32,9 +32,7 @@ Route::put('pengajar/update/{id?}','Api\PengajarController@update');
 Route::delete('pengajar/remove/{id?}','Api\PengajarController@destroy');
 
 /* PESERTA */
-
 Route::get('peserta/nis/{nis?}','Api\PesertaController@getPesertaByNIS');
-
 Route::get('peserta','Api\PesertaController@index');
 Route::get('peserta/{id?}','Api\PesertaController@show');
 Route::post('peserta/add','Api\PesertaController@store');
@@ -57,7 +55,6 @@ Route::delete('level/remove/{id?}','Api\LevelController@destroy');
 
 /* KELAS */
 Route::get('kelas/detail','Api\KelasController@detail');
-
 Route::get('kelas','Api\KelasController@index');
 Route::get('kelas/{id?}','Api\KelasController@show');
 Route::post('kelas/add','Api\KelasController@store');
@@ -69,3 +66,17 @@ Route::get('infaq','Api\InfaqController@index');
 Route::get('infaq/{id?}','Api\InfaqController@show');
 Route::post('infaq/add','Api\InfaqController@store');
 // Route::delete('infaq/remove/{id?}','Api\InfaqController@destroy');
+
+/* SARAN */
+Route::get('saran','Api\SaranController@index');
+Route::get('saran/{id?}','Api\SaranController@show');
+Route::post('saran/add','Api\SaranController@store');
+Route::put('saran/update/{id?}','Api\SaranController@update');
+Route::delete('saran/remove/{id?}','Api\SaranController@destroy');
+
+/* TESTIMONI */
+Route::get('testimoni','Api\TestimoniController@index');
+Route::get('testimoni/{id?}','Api\TestimoniController@show');
+Route::post('testimoni/add','Api\TestimoniController@store');
+Route::put('testimoni/update/{id?}','Api\TestimoniController@update');
+Route::delete('testimoni/remove/{id?}','Api\TestimoniController@destroy');

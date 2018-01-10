@@ -72,3 +72,20 @@ Route::get('/infaq/view/{id?}', 'UIInfaqController@view');
 Route::get('/infaq/edit/{id?}', 'UIInfaqController@edit');
 Route::get('infaq/export', 'UIInfaqController@export');
 Route::get('infaq/datatables', 'UIInfaqController@datatables');
+
+/* SARAN */
+Route::get('saran', 'UISaranController@index');
+Route::get('/saran/add', 'UISaranController@add');
+Route::get('/saran/view/{id?}', 'UISaranController@view');
+Route::get('/saran/edit/{id?}', 'UISaranController@edit');
+Route::get('saran/export', 'UISaranController@export');
+Route::get('saran/datatables', 'UISaranController@datatables');
+Route::get('/saran/jawab/{id?}', 'UISaranController@jawab');
+
+/* TESTIMONI */
+Route::get('testimoni', 'UITestimoniController@index');
+Route::get('/testimoni/add', 'UITestimoniController@add');
+Route::get('/testimoni/view/{id?}', 'UITestimoniController@view');
+// Route::get('/testimoni/edit/{id?}', 'UITestimoniController@edit');
+Route::get('testimoni/export', 'UITestimoniController@export');
+Route::get('testimoni/datatables', 'UITestimoniController@datatables');

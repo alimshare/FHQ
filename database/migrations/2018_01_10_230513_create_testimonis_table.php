@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateLocationTable extends Migration
+class CreateTestimonisTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,10 @@ class CreateLocationTable extends Migration
      */
     public function up()
     {
-        Schema::create('location', function (Blueprint $table) {
+        Schema::create('testimoni', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('nama',60);
-            $table->string('alamat',255)->nullable();
-            $table->string('telp',15)->nullable();
-            $table->text('deskripsi')->nullable();
-            $table->string('longitude',150)->nullable();
-            $table->string('latitude',150)->nullable();            
+            $table->integer('id_santri');
+            $table->string('pesan');
             $table->timestamps();
             $table->softDeletes();
         });
@@ -33,6 +29,6 @@ class CreateLocationTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('location');
+        Schema::dropIfExists('testimoni');
     }
 }

@@ -4,7 +4,7 @@
       <!-- Breadcrumb -->
       <ol class="breadcrumb">
         <li class="breadcrumb-item">Home</li>
-        <li class="breadcrumb-item">Infaq</li>
+        <li class="breadcrumb-item">Saran</li>
         <li class="breadcrumb-item active">View</li>
       </ol>
 
@@ -15,7 +15,7 @@
             <div class="col-lg-6">
               <div class="card">
                 <div class="card-header">
-                  <strong>Infaq</strong>
+                  <strong>Saran</strong>
                   <small>Detail</small>
                 </div>
                 <div class="card-body">
@@ -25,24 +25,20 @@
 
                       <table class="table table-bordered">
                         <tr>
-                          <th>Tanggal</th>
-                          <td>{{ $object->tanggal }}</td>
+                          <th>Santri</th>
+                          <td>{{ $object->getSantri()->nomor_induk . ' - ' . $object->getSantri()->nama }}</td>
                         </tr>
                         <tr>
-                          <th>Kelas</th>
-                          <td>{{ $object->getPeserta()->getKelas()->getLevel()->nama .' - '. $object->getPeserta()->getKelas()->getPengajar()->nama }}</td>
+                          <th>Pesan</th>
+                          <td>{{ $object->pesan }}</td>
                         </tr>
                         <tr>
-                          <th>Peserta</th>
-                          <td>{{ $object->getPeserta()->getSantri()->nomor_induk .' - '. $object->getPeserta()->getSantri()->nama }}</td>
-                        </tr>
-                        <tr>
-                          <th>Nominal</th>
-                          <td>{{ number_format($object->nominal) }}</td>
+                          <th>Tanggapan</th>
+                          <td>{{ $object->tanggapan or '-' }}</td>
                         </tr>
                         <tr>
                           <th>Staff</th>
-                          <td>{{ $object->getStaff()->name }}</td>
+                          <td>{{ $object->getStaff()->name or '-' }}</td>
                         </tr>
                       </table>
 
@@ -53,8 +49,10 @@
 
                 </div>
                 <div class="card-footer">
-                  <a href="{{ URL::previous() }}" class="btn btn-outline-secondary pull-left" id="btnCancel"> <i class="icon-arrow-left"></i> Back</a>
-                  <a href="{{ url('infaq/cetak/'.$object->id) }}" class="btn btn-outline-success pull-right" id="btnCetak"> <i class="fa fa-print"></i> Cetak</a>
+                  <a href="{{ url('saran') }}" class="btn btn-outline-secondary pull-left" id="btnCancel"> <i class="icon-arrow-left"></i> Back</a>
+                  @if ($object->tanggapan == '')
+                    <a href="{{ url('/saran/jawab/'.$object->id) }}" class="btn btn-outline-success pull-right">Tanggapi</a>
+                  @endif
                 </div>
               </div>
 

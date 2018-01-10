@@ -2,7 +2,7 @@
       <nav class="sidebar-nav">
         <ul class="nav">
           <li class="nav-item">
-            <a class="nav-link" href="/home"><i class="icon-speedometer"></i> Dashboard <span class="badge badge-primary">NEW</span></a>
+            <a class="nav-link" href="{{ url('/') }}"><i class="icon-speedometer"></i> Dashboard <!-- <span class="badge badge-primary">NEW</span> --></a>
           </li>
 
           <li class="nav-title">
@@ -16,6 +16,7 @@
               <li class="nav-item"><a class="nav-link" href="{{ url('staff') }}"><i class="icon-user"></i> Staff </a></li>
               <li class="nav-item"><a class="nav-link" href="{{ url('level') }}"><i class="icon-layers"></i> Level </a></li>
               <li class="nav-item"><a class="nav-link" href="{{ url('semester') }}"><i class="icon-star"></i> Semester </a></li>
+              <li class="nav-item"><a class="nav-link" onclick="alert('coming soon')"><i class="icon-book-open"></i> Buku </a></li>
               <li class="nav-item"><a class="nav-link" onclick="alert('coming soon')"><i class="icon-map"></i> Lokasi </a></li>
             </ul>
           </li>
@@ -28,14 +29,24 @@
           <li class="nav-item">
             <a class="nav-link" href="{{ url('infaq') }}"><i class="icon-calculator"></i> Infaq </a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" onclick="alert('coming soon')"><i class="fa fa-cart-plus"></i> Pembelian </a>
+          </li>
 
           <li class="divider"></li>
+
           <li class="nav-title">
             Extras
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="widgets.html"><i class="icon-settings"></i> Settings </a>
+            <a class="nav-link" href="{{ url('saran') }}"><i class="icon-calculator"></i> Kritik & Saran </a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url('testimoni') }}"><i class="icon-calculator"></i> Testimoni </a>
+          </li>
+          <!-- <li class="nav-item">
+            <a class="nav-link" href="widgets.html"><i class="icon-settings"></i> Settings </a>
+          </li> -->
           <li class="nav-item">
             <a class="nav-link" href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();"><i class="icon-logout"></i> Logout </a>
             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
