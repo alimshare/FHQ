@@ -40,6 +40,10 @@
                           <th>Hari</th>
                           <td>{{ $object->hari }}</td>
                         </tr>
+                        <tr>
+                          <th>Jumlah Peserta</th>
+                          <td>{{ $object->getPeserta()->count() }}</td>
+                        </tr>
                       </table>
 
                     </div>

@@ -5,12 +5,13 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="CoreUI Bootstrap 4 Admin Template">
-  <meta name="author" content="Lukasz Holeczek">
-  <meta name="keyword" content="CoreUI Bootstrap 4 Admin Template">
+  <meta name="description" content="FHQ - Forum Halaqoh Qur'an">
+  <meta name="author" content="Hamba Allah">
+  <meta name="keyword" content="FHQ, Forum Halaqoh Qur'an, Islam, Al-Qur'an, Tahsin, Takhosus, Tahfidz">
   <!-- <link rel="shortcut icon" href="assets/ico/favicon.png"> -->
+  <link rel="shortcut icon" href="{{ url('/') }}/dist/img/favicon.png">
 
-  <title>CoreUI Bootstrap 4 Admin Template</title>
+  <title>FHQ - Login</title>
 
   <!-- Icons -->
   <link href="dist/vendors/css/font-awesome.min.css" rel="stylesheet">

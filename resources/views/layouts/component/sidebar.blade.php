@@ -15,7 +15,7 @@
               <li class="nav-item"><a class="nav-link" href="{{ url('pengajar') }}"><i class="icon-user"></i> Pengajar </a></li>
               <li class="nav-item"><a class="nav-link" href="{{ url('staff') }}"><i class="icon-user"></i> Staff </a></li>
               <li class="nav-item"><a class="nav-link" href="{{ url('level') }}"><i class="icon-layers"></i> Level </a></li>
-              <li class="nav-item"><a class="nav-link" href="{{ url('semester') }}"><i class="icon-star"></i> Semester </a></li>
+              <li class="nav-item"><a class="nav-link" href="{{ url('semester') }}"><i class="icon-graduation"></i> Semester </a></li>
               <li class="nav-item"><a class="nav-link" onclick="alert('coming soon')"><i class="icon-book-open"></i> Buku </a></li>
               <li class="nav-item"><a class="nav-link" onclick="alert('coming soon')"><i class="icon-map"></i> Lokasi </a></li>
             </ul>
@@ -39,10 +39,10 @@
             Extras
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{{ url('saran') }}"><i class="icon-calculator"></i> Kritik & Saran </a>
+            <a class="nav-link" href="{{ url('saran') }}"><i class="icon-notebook"></i> Kritik & Saran </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{{ url('testimoni') }}"><i class="icon-calculator"></i> Testimoni </a>
+            <a class="nav-link" href="{{ url('testimoni') }}"><i class="icon-star"></i> Testimoni </a>
           </li>
           <!-- <li class="nav-item">
             <a class="nav-link" href="widgets.html"><i class="icon-settings"></i> Settings </a>

@@ -19,7 +19,8 @@ class CreateSantrisTable extends Migration
             $table->string('nama', 100);
             $table->string('telephone',15)->nullable();
             $table->string('email',100)->nullable();
-            $table->enum('jenis_kelamin', ['L', 'P', 'LP']);
+            $table->enum('jenis_kelamin', ['L', 'P']);
+            $table->string('alamat')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });
