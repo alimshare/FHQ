@@ -124,7 +124,10 @@
 
   <script type="text/javascript">
       $(document).ready(function(){
-          $('.datatable').DataTable();
+
+          if ($('.datatable').length > 0) {
+            $('.datatable').DataTable();
+          }
 
           //Flat red color scheme for iCheck
           $('input[type="checkbox"].flat-blue, input[type="radio"].flat-blue').iCheck({
