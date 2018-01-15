@@ -3,16 +3,26 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Repositories\IKelasRepository;
+use App\Repositories\IPesertaRepository;
+
+use App\Service\PesertaService;
 
 class HomeController extends Controller
 {
+
+    protected $crudKelas;
+    protected $pesertaService;
+
     /**
      * Create a new controller instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct(IKelasRepository $k)
     {
+        $this->crudKelas    = $k;
+        $this->pesertaService     = new PesertaService;
         $this->middleware('auth');
     }
 
@@ -23,7 +33,18 @@ class HomeController extends Controller
      */
     public function index()
     {
-        // return view('home');
-        return view('other.sample');
+        $kelas = new $this->crudKelas;
+        $kelas = $kelas->all()->count();
+
+        $peserta = $this->pesertaService->getPesertaByKelasInSemesterActive()->count();
+
+        $count = array(
+            'santri'    => \App\Model\Santri::count(),
+            'pengajar'  => \App\Model\Pengajar::count(),
+            'kelas'     => $kelas,
+            'peserta'   => $peserta
+        );
+        
+        return view('other.sample')->with('count', $count);
     }
 }

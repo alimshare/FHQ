@@ -16,7 +16,7 @@ class UIKelasController extends Controller
     }
 
     public function index(){
-        $list = $this->crud->all();    
+        $list = $this->crud->all();
         return view('modules.kelas.kelas_list')->with('list',$list);
     }
     

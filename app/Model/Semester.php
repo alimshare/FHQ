@@ -15,4 +15,10 @@ class Semester extends Model
 	
     protected 	$table 		= "semester";
     protected	$visible 	= array("id","nama","deskripsi","tanggal_mulai","tanggal_selesai");
+
+    function getActive(){
+    	$object = Semester::where('status','=','ACTIVE');
+    	return $object->first();
+    }
+
 }

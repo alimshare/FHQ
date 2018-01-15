@@ -69,9 +69,10 @@
                 <div class="col-6">
                   <button type="submit" class="btn btn-primary px-4">Login</button>
                 </div>
-                <div class="col-6 text-right">
+                {{-- <div class="col-6 text-right">
                   <a href="{{ route('password.request') }}" class="btn btn-link px-0">Forgot password?</a>
                 </div>
+                --}}
               </div>
               </form>
             </div>

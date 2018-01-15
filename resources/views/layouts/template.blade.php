@@ -116,8 +116,8 @@
   <!-- Custom scripts required by this view -->
   <script src="{{ url('/') }}/dist/js/views/main.js"></script>
 
-  <script src="{{ url('/') }}/dist/vendors/dataTables/js/jquery.dataTables.min.js"></script>
-  <script src="{{ url('/') }}/dist/vendors/dataTables/js/DataTablesBS4.js"></script>
+  <script src="{{ url('/') }}/dist/vendors/datatables/js/jquery.dataTables.min.js"></script>
+  <script src="{{ url('/') }}/dist/vendors/datatables/js/DataTablesBS4.js"></script>
 
   <!-- iCheck 1.0.1 -->
   <script src="{{ url('/') }}/dist/vendors/iCheck/icheck.min.js"></script>

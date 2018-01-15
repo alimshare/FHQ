@@ -17,8 +17,8 @@ class CreateSemestersTable extends Migration
             $table->increments('id');
             $table->string('nama',60);
             $table->text('deskripsi')->nullable();
-            $table->date('tanggal_mulai');
-            $table->date('tanggal_selesai');
+            $table->date('tanggal_mulai')->nullable();
+            $table->date('tanggal_selesai')->nullable();
             $table->string('status',10)->default('');
             $table->timestamps();
             $table->softDeletes();

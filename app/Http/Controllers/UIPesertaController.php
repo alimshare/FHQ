@@ -3,19 +3,27 @@
 namespace App\Http\Controllers;
 
 use App\Repositories\IPesertaRepository as BaseCrud;
+use App\Repositories\IKelasRepository;
 use Excel;
 
 class UIPesertaController extends Controller
 {
     protected $crud;
+    protected $crudKelas;
     
-    public function __construct(BaseCrud $c) {
+    public function __construct(BaseCrud $c, IKelasRepository $k) {
         $this->crud = $c;
+        $this->crudKelas = $k;
         $this->middleware('auth');  
     }
 
     public function index(){
-        $list = $this->crud->all();    
+        $listKelas = $this->crudKelas->all();
+        $ids = array();
+        foreach ($listKelas as $key => $value) {
+            $ids[] = $value->id;
+        }
+        $list      = $this->crud->getPesertaByKelasInSemesterActive($ids);
         return view('modules.peserta.peserta_list')->with('list',$list);
     }
 

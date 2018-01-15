@@ -15,7 +15,7 @@ class CreateSantrisTable extends Migration
     {
         Schema::create('santri', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('nomor_induk', 30);
+            $table->string('nomor_induk', 30)->unique();
             $table->string('nama', 100);
             $table->string('telephone',15)->nullable();
             $table->string('email',100)->nullable();

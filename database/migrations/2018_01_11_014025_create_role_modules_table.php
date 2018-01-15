@@ -16,6 +16,7 @@ class CreateRoleModulesTable extends Migration
         Schema::create('role_modules', function (Blueprint $table) {
             $table->increments('id');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

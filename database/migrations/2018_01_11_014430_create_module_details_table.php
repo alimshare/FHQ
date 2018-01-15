@@ -16,6 +16,7 @@ class CreateModuleDetailsTable extends Migration
         Schema::create('module_details', function (Blueprint $table) {
             $table->increments('id');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

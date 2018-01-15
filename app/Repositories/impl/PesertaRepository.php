@@ -4,11 +4,12 @@ namespace App\Repositories\impl;
 
 use App\Repositories\IPesertaRepository;
 use App\Repositories\impl\CRUDRepository;
+use App\Repositories\IKelasRepository;
 
 class PesertaRepository extends CRUDRepository  implements IPesertaRepository
 {
-    protected $modelClz 	  = 'App\Model\Peserta';
-    protected $modelClzSantri = 'App\Model\Santri';
+    protected $modelClz 	  	= 'App\Model\Peserta';
+    protected $modelClzSantri 	= 'App\Model\Santri';
 
 	public function getPesertaByNIS($nomor_induk) {
 		
@@ -35,10 +36,19 @@ class PesertaRepository extends CRUDRepository  implements IPesertaRepository
         	return $peserta;
 
         } else {
-
             return ['errorCode'=>'01','message' => 'santri tidak ditemukan'];
         }
 
+	}
+
+	/**
+	*	@param $ids array of id_kelas in active semester
+	*/
+	public function getPesertaByKelasInSemesterActive($ids = array()){
+		$peserta 	= new $this->modelClz;
+        $list   	= $peserta::whereIn('id_kelas',$ids)->get();
+
+        return $list;
 	}
 	
 }
