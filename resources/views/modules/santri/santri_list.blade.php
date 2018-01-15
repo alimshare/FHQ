@@ -24,7 +24,7 @@
                 </div>
                 <div class="card-body">
                 
-                  <table class="table table-responsive-sm table-bordered table-sm" id="tbl" width="100%">
+                  <table class="table table-responsive-sm table-bordered" id="tbl" width="100%">
                     <thead>
                       <tr>
                         <th>NIS</th>
@@ -93,16 +93,16 @@
     });
   });
 
-  $(".btnDelete").click(function(){
+  $("table").on('click', '.btnDelete', function(){
     var id = $(this).attr('data-id');
     $("#id").val(id);
     $("#btnClose").focus();
   });
   
   $("#form").on('submit', function(e){
-      e.preventDefault();            
-      var id  = $("#id").val();
-      
+      e.preventDefault();      
+
+      var id  = $("#id").val();  
       var objRequest = {};
 
       $.ajax({

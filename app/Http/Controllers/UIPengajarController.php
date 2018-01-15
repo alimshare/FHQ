@@ -17,8 +17,7 @@ class UIPengajarController extends Controller
     }
 
     public function index(){
-        $list = $this->crud->all();    
-        return view('modules.pengajar.pengajar_list')->with('list',$list);
+        return view('modules.pengajar.pengajar_list');
     }
 
     public function datatables(){

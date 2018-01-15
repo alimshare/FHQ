@@ -25,7 +25,7 @@
                 </div>
                 <div class="card-body">
                 
-                  <table class="table table-responsive-sm table-bordered datatable">
+                  <table class="table table-responsive-sm table-bordered" width="100%">
                     <thead>
                       <tr>
                         <th>Nomor Induk</th>
@@ -34,30 +34,6 @@
                         <th>Action</th>
                       </tr>
                     </thead>
-                    <tbody>
-
-                      @foreach ( $list as $key => $value )
-                        <tr>
-                          <td>{{ $value['nomor_induk'] }} </td>
-                          <td>{{ $value['nama'] }}</td>
-                          <td>
-                            @if ($value->jenis_kelamin == 'L')
-                              Ikhwan
-                            @elseif ($value->jenis_kelamin == 'P')
-                              Akhwat
-                            @endif 
-                          </td>
-                          <td>
-                            <a href="{{ url('/pengajar/view/'.$value->id) }}" class="btn btn-outline-primary btn-sm">View</a>
-                            <a href="{{ url('/pengajar/edit/'.$value->id) }}" class="btn btn-success btn-sm">Edit</a>
-                            @if ($value->status == '')
-                              <button type="button" class="btn btn-danger btn-sm btnDelete" data-toggle="modal" data-target="#dangerModal" data-id="{{ $value->id }}">Delete</button>
-                            @endif
-                          </td>
-                        </tr>
-                      @endforeach
-
-                    </tbody>
                   </table>
 
                 </div>
@@ -104,8 +80,21 @@
 
 @section('footer-script')
       <script type="text/javascript">
+        $(function(){
+          $('.table').DataTable({
+              processing: true,
+              serverSide: true,
+              ajax: '{{ url('pengajar/datatables') }}',
+              columns: [
+                { data: 'nomor_induk', name: 'nomor_induk'},
+                { data: 'nama', name: 'nama'},
+                { data: 'jenis_kelamin', name: 'jenis_kelamin', searchable: false },
+                { data: 'action', name: 'action', orderable: false, searchable: false}
+              ]
+          });
+        });
 
-        $(".btnDelete").click(function(){
+        $("table").on('click', '.btnDelete', function(){
           var id = $(this).attr('data-id');
           $("#id").val(id);
           $("#btnClose").focus();

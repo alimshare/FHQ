@@ -23,27 +23,13 @@
                 </div>
                 <div class="card-body">
                 
-                  <table class="table table-responsive-sm table-bordered datatable">
+                  <table class="table table-responsive-sm table-bordered" width="100%">
                     <thead>
                       <tr>
                         <th>Tingkatan</th>
                         <th>Action</th>
                       </tr>
                     </thead>
-                    <tbody>
-
-                      @foreach ( $list as $key => $value )
-                        <tr>
-                          <td>{{ $value['nama'] }} </td>
-                          <td>
-                            <a href="{{ url('/level/view/'.$value->id) }}" class="btn btn-outline-primary btn-sm">View</a>
-                            <a href="{{ url('/level/edit/'.$value->id) }}" class="btn btn-success btn-sm">Edit</a>
-                            <button type="button" class="btn btn-danger btn-sm btnDelete" data-toggle="modal" data-target="#dangerModal" data-id="{{ $value->id }}">Delete</button>                            
-                          </td>
-                        </tr>
-                      @endforeach
-
-                    </tbody>
                   </table>
 
                 </div>
@@ -91,7 +77,19 @@
 @section('footer-script')
       <script type="text/javascript">
 
-        $(".btnDelete").click(function(){
+        $(function(){
+          $('.table').DataTable({
+              processing: true,
+              serverSide: true,
+              ajax: '{{ url('level/datatables') }}',
+              columns: [
+                { data: 'nama', name: 'nama'},
+                { data: 'action', name: 'action', orderable: false, searchable: false}
+              ]
+          });
+        });
+
+        $("table").on('click', '.btnDelete', function(){
           var id = $(this).attr('data-id');
           $("#id").val(id);
           $("#btnClose").focus();

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Repositories\ILevelRepository as BaseCrud;
 use Excel;
+use DataTables;
 
 class UILevelController extends Controller
 {
@@ -16,9 +17,22 @@ class UILevelController extends Controller
     }
 
     public function index(){
-        $list = $this->crud->all();    
-        return view('modules.level.level_list')->with('list',$list);
+        return view('modules.level.level_list');
     }
+
+    public function datatables(){
+        $list = $this->crud->all();
+
+        return Datatables::of($list)
+        ->addColumn('action', function($list){
+            return '<a href="'. url('/level/view/'.$list->id) .'" class="btn btn-outline-primary btn-sm">View</a>
+                    <a href="'. url('/level/edit/'.$list->id) .'" class="btn btn-success btn-sm">Edit</a>
+                    <button type="button" class="btn btn-danger btn-sm btnDelete" data-toggle="modal" data-target="#dangerModal" data-id="'. $list->id .'">Delete</button>
+                  ';
+        })
+        ->make(true);
+    }
+    
     
     public function add(){
         return view('modules.level.level_add');
