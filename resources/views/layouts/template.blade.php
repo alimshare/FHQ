@@ -39,6 +39,7 @@
     select.form-control.input-sm.pull-right {
       margin: 0 5px;
     }
+    a { text-decoration: none; }
   </style>
 
     <!-- iCheck for checkboxes and radio inputs -->
@@ -116,7 +117,7 @@
   <!-- Custom scripts required by this view -->
   <script src="{{ url('/') }}/dist/js/views/main.js"></script>
 
-  <script src="{{ url('/') }}/dist/vendors/datatables/js/jquery.dataTables.min.js"></script>
+  <script src="{{ url('/') }}/dist/vendors/datatables/js/jquery.dataTables.js"></script>
   <script src="{{ url('/') }}/dist/vendors/datatables/js/DataTablesBS4.js"></script>
 
   <!-- iCheck 1.0.1 -->

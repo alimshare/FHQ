@@ -6,7 +6,7 @@
       <!-- Breadcrumb -->
       <ol class="breadcrumb">
         <li class="breadcrumb-item">Home</li>
-        <li class="breadcrumb-item active">Level</li>
+        <li class="breadcrumb-item active">Kelas</li>
       </ol>
 
       <div class="container-fluid">

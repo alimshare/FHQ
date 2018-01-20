@@ -15,11 +15,11 @@
             <div class="col-lg-12">
               <div class="card">
                 <div class="card-header">
-                  <i class="fa fa-align-justify"></i> List Testimoni
-                  <div class="pull-right">
+                  <div class="float-right">
                     <a href="{{ url('testimoni/export') }}" class="btn btn-success" title="Export CSV"> <i class="fa fa-file-excel-o"></i> Export</a>
                     <a href="{{ url('testimoni/add') }}" class="btn btn-primary"> <i class="fa fa-plus"></i> Add</a>
                   </div>
+                  <h4><i class="fa fa-align-justify"></i> List Testimoni</h4>
                 </div>
                 <div class="card-body">
                 

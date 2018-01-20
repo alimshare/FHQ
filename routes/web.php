@@ -16,6 +16,7 @@ Route::get('/', 'HomeController@index');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/master', 'HomeController@master');
 
 /* SEMESTER */
 Route::get('/semester', 'UISemesterController@index');

@@ -8,7 +8,7 @@
           <li class="nav-title">
             Manage
           </li>
-          <li class="nav-item nav-dropdown">
+          <!-- <li class="nav-item nav-dropdown">
             <a class="nav-link nav-dropdown-toggle" href="#"><i class="icon-grid"></i> Master</a>
             <ul class="nav-dropdown-items">
               <li class="nav-item"><a class="nav-link" href="{{ url('santri') }}"><i class="icon-user"></i> Santri </a></li>
@@ -19,6 +19,9 @@
               <li class="nav-item"><a class="nav-link" onclick="alert('coming soon')"><i class="icon-book-open"></i> Buku </a></li>
               <li class="nav-item"><a class="nav-link" onclick="alert('coming soon')"><i class="icon-map"></i> Lokasi </a></li>
             </ul>
+          </li> -->
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url('master') }}"><i class="icon-grid"></i> Master </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="{{ url('kelas') }}"><i class="icon-home"></i> Kelas </a>

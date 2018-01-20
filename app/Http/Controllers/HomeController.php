@@ -47,4 +47,8 @@ class HomeController extends Controller
         
         return view('other.sample')->with('count', $count);
     }
+
+    public function master(){
+        return view('other.master');
+    }
 }

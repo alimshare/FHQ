@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateRoleModulesTable extends Migration
+class CreateBukusTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,9 @@ class CreateRoleModulesTable extends Migration
      */
     public function up()
     {
-        Schema::create('role_module', function (Blueprint $table) {
+        Schema::create('bukus', function (Blueprint $table) {
             $table->increments('id');
             $table->timestamps();
-            $table->softDeletes();
         });
     }
 
@@ -27,6 +26,6 @@ class CreateRoleModulesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('role_module');
+        Schema::dropIfExists('bukus');
     }
 }

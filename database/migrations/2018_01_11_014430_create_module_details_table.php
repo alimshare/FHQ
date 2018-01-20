@@ -13,8 +13,12 @@ class CreateModuleDetailsTable extends Migration
      */
     public function up()
     {
-        Schema::create('module_details', function (Blueprint $table) {
+        Schema::create('module_detail', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('id_module');
+            $table->string('feature');
+            $table->string('description');
+            $table->string('link');
             $table->timestamps();
             $table->softDeletes();
         });
@@ -27,6 +31,6 @@ class CreateModuleDetailsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('module_details');
+        Schema::dropIfExists('module_detail');
     }
 }

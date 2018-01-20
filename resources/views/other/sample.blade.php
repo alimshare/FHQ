@@ -30,7 +30,7 @@
                   <small class="text-muted text-uppercase font-weight-bold">Kelas</small>
                 </div>
                 <div class="card-footer px-3 py-2">
-                  <a class="font-weight-bold font-xs btn-block text-muted" href="#">View More <i class="fa fa-angle-right float-right font-lg"></i></a>
+                  <a class="font-weight-bold font-xs btn-block text-muted" href="{{ url('kelas') }}">View More <i class="fa fa-angle-right float-right font-lg"></i></a>
                 </div>
               </div>
             </div>
@@ -46,7 +46,7 @@
                   <small class="text-muted text-uppercase font-weight-bold">Peserta</small>
                 </div>
                 <div class="card-footer px-3 py-2">
-                  <a class="font-weight-bold font-xs btn-block text-muted" href="#">View More <i class="fa fa-angle-right float-right font-lg"></i></a>
+                  <a class="font-weight-bold font-xs btn-block text-muted" href="{{ url('peserta') }}">View More <i class="fa fa-angle-right float-right font-lg"></i></a>
                 </div>
               </div>
             </div>
@@ -62,7 +62,7 @@
                   <small class="text-muted text-uppercase font-weight-bold">Muwajih</small>
                 </div>
                 <div class="card-footer px-3 py-2">
-                  <a class="font-weight-bold font-xs btn-block text-muted" href="#">View More <i class="fa fa-angle-right float-right font-lg"></i></a>
+                  <a class="font-weight-bold font-xs btn-block text-muted" href="{{ url('pengajar') }}">View More <i class="fa fa-angle-right float-right font-lg"></i></a>
                 </div>
               </div>
             </div>
@@ -78,7 +78,7 @@
                   <small class="text-muted text-uppercase font-weight-bold">Santri</small>
                 </div>
                 <div class="card-footer px-3 py-2">
-                  <a class="font-weight-bold font-xs btn-block text-muted" href="#">View More <i class="fa fa-angle-right float-right font-lg"></i></a>
+                  <a class="font-weight-bold font-xs btn-block text-muted" href="{{ url('santri') }}">View More <i class="fa fa-angle-right float-right font-lg"></i></a>
                 </div>
               </div>
             </div>
