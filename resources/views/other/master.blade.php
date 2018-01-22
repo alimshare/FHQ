@@ -58,7 +58,7 @@
                     </div>
 
                     <div class="col-6 col-md-4 col-lg-3">
-                      <a onclick="alert('coming soon')" style="text-decoration:none">
+                      <a href="{{ url('buku') }}" style="text-decoration:none">
                       <div class="card text-white bg-primary">
                         <div class="card-body">
                             <div class="h1 text-muted text-right mb-2">

@@ -90,3 +90,11 @@ Route::get('/testimoni/view/{id?}', 'UITestimoniController@view');
 // Route::get('/testimoni/edit/{id?}', 'UITestimoniController@edit');
 Route::get('testimoni/export', 'UITestimoniController@export');
 Route::get('testimoni/datatables', 'UITestimoniController@datatables');
+
+/* BUKU */
+Route::get('/buku', 'UIBukuController@index');
+Route::get('/buku/add', 'UIBukuController@add');
+Route::get('/buku/view/{id?}', 'UIBukuController@view');
+Route::get('/buku/edit/{id?}', 'UIBukuController@edit');
+Route::get('buku/export', 'UIBukuController@export');
+Route::get('buku/datatables', 'UIBukuController@datatables');

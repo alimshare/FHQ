@@ -80,3 +80,10 @@ Route::get('testimoni/{id?}','Api\TestimoniController@show');
 Route::post('testimoni/add','Api\TestimoniController@store');
 Route::put('testimoni/update/{id?}','Api\TestimoniController@update');
 Route::delete('testimoni/remove/{id?}','Api\TestimoniController@destroy');
+
+/* BUKU */
+Route::get('buku','Api\BukuController@index');
+Route::get('buku/{id?}','Api\BukuController@show');
+Route::post('buku/add','Api\BukuController@store');
+Route::put('buku/update/{id?}','Api\BukuController@update');
+Route::delete('buku/remove/{id?}','Api\BukuController@destroy');

@@ -13,9 +13,17 @@ class CreateBukusTable extends Migration
      */
     public function up()
     {
-        Schema::create('bukus', function (Blueprint $table) {
+        Schema::create('buku', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('kode',60)->nullable();
+            $table->string('judul',60);
+            $table->string('pengarang',60)->nullable();
+            $table->text('deskripsi')->nullable();
+            $table->string('tahun_terbit',4)->nullable();
+            $table->double('harga')->default(0);
+            $table->string('gambar')->nullable();
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
@@ -26,6 +34,6 @@ class CreateBukusTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('bukus');
+        Schema::dropIfExists('buku');
     }
 }
