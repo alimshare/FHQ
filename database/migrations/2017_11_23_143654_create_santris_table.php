@@ -21,6 +21,7 @@ class CreateSantrisTable extends Migration
             $table->string('email',100)->nullable();
             $table->enum('jenis_kelamin', ['L', 'P']);
             $table->string('alamat')->nullable();
+            $table->string('level')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

@@ -38,14 +38,14 @@
                             <div class="h1 text-muted text-right mb-2">
                               <i class="icon-people"></i>
                             </div>
-                            <div class="h5 mb-0">Muwajih</div>
+                            <div class="h5 mb-0">Pengajar</div>
                         </div>
                       </div>
                       </a>
                     </div>
 
                     <div class="col-6 col-md-4 col-lg-3">
-                      <a onclick="alert('coming soon')" style="text-decoration:none">
+                      <a href="{{ url('user') }}" style="text-decoration:none">
                       <div class="card text-white bg-primary">
                         <div class="card-body">
                             <div class="h1 text-muted text-right mb-2">
@@ -96,7 +96,7 @@
                       </a>
                     </div>
 
-                    <div class="col-6 col-md-4 col-lg-3">
+                    <!-- <div class="col-6 col-md-4 col-lg-3">
                       <a onclick="alert('coming soon')" style="text-decoration:none">
                       <div class="card text-white bg-primary">
                         <div class="card-body">
@@ -107,7 +107,7 @@
                         </div>
                       </div>
                       </a>
-                    </div>
+                    </div> -->
 
                   </div>
                 </div>

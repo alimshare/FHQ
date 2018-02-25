@@ -13,7 +13,7 @@
 
 Route::get('/', 'HomeController@index');
 
-Auth::routes();
+Auth::routes(); // comments registration 
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/master', 'HomeController@master');
@@ -98,3 +98,15 @@ Route::get('/buku/view/{id?}', 'UIBukuController@view');
 Route::get('/buku/edit/{id?}', 'UIBukuController@edit');
 Route::get('buku/export', 'UIBukuController@export');
 Route::get('buku/datatables', 'UIBukuController@datatables');
+
+/* USER */
+Route::get('user', 'UIUserController@index');
+Route::get('user/add', 'Auth\RegisterController@showRegistrationForm')->name('register');
+Route::post('user/add', 'Auth\RegisterController@register');
+Route::get('user/view/{id?}', 'UIUserController@view');
+Route::get('user/edit/{id?}', 'UIUserController@edit');
+Route::post('user/edit/{id?}', 'UIUserController@update');
+Route::post('user/remove', 'UIUserController@remove');
+Route::get('user/export', 'UIUserController@export');
+Route::get('user/datatables', 'UIUserController@datatables');
+Route::post('user/reset_password', 'UIUserController@reset_password');

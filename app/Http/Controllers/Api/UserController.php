@@ -3,10 +3,10 @@
 namespace App\Http\Controllers\Api;
 
 use Illuminate\Http\Request;
-use App\Repositories\IPengajarRepository as BaseCrud;
 use App\Http\Controllers\Controller;
+use App\Repositories\IUserRepository as BaseCrud;
 
-class PengajarController extends Controller
+class UserController extends Controller
 {
 
     protected $crud;

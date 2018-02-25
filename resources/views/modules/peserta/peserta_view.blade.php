@@ -34,11 +34,11 @@
                         </tr>
                         <tr>
                           <th>Pengajar</th>
-                          <td>{{ $object->getKelas()->getPengajar()->nama }}</td>
+                          <td>{{ $object->getKelas()->getPengajar()->nomor_induk .' - '. $object->getKelas()->getPengajar()->nama }}</td>
                         </tr>
                         <tr>
                           <th>Santri</th>
-                          <td>{{ $object->getSantri()->nama }}</td>
+                          <td>{{ $object->getSantri()->nomor_induk .' - '. $object->getSantri()->nama }}</td>
                         </tr>
                       </table>
 

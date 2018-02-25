@@ -4,7 +4,7 @@ namespace App\Repositories;
 
 use App\Repositories\ICRUDRepository;
 
-interface IStaffRepository extends ICRUDRepository
+interface IUserRepository extends ICRUDRepository
 {
 	
 }

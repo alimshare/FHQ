@@ -92,7 +92,7 @@
 
   </div>
 
-  <footer class="app-footer">
+  <footer class="app-footer" style="font-size: smaller;">
   <span><a href="#">Team IT FHQ An Nashr</a> © 2017  </span>
     <span class="ml-auto">Powered by <a href="http://coreui.io">CoreUI</a></span>
     <!-- <span><a href="http://coreui.io">CoreUI</a> © 2017 creativeLabs.</span>

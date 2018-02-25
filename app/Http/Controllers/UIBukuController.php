@@ -24,6 +24,9 @@ class UIBukuController extends Controller
         $list = $this->crud->all();
 
         return Datatables::of($list)
+        ->editColumn('harga', function($list){
+            return number_format($list->harga);
+        })
         ->addColumn('action', function($list){
             return '<a href="'. url('/buku/view/'.$list->id) .'" class="btn btn-outline-primary btn-sm">View</a>
                     <a href="'. url('/buku/edit/'.$list->id) .'" class="btn btn-success btn-sm">Edit</a>

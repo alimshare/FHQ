@@ -18,7 +18,7 @@
                   <i class="fa fa-align-justify"></i> List saran
                   <div class="pull-right">
                     <a href="{{ url('saran/export') }}" class="btn btn-success" title="Export CSV"> <i class="fa fa-file-excel-o"></i> Export</a>
-                    <a href="saran/add" class="btn btn-primary"> <i class="fa fa-plus"></i> Add</a>
+                    <!-- <a href="saran/add" class="btn btn-primary"> <i class="fa fa-plus"></i> Add</a> -->
                   </div>
                 </div>
                 <div class="card-body">

@@ -17,7 +17,7 @@
                 <div class="card-header">
                   <div class="float-right">
                     <a href="{{ url('testimoni/export') }}" class="btn btn-success" title="Export CSV"> <i class="fa fa-file-excel-o"></i> Export</a>
-                    <a href="{{ url('testimoni/add') }}" class="btn btn-primary"> <i class="fa fa-plus"></i> Add</a>
+                    <!-- <a href="{{ url('testimoni/add') }}" class="btn btn-primary"> <i class="fa fa-plus"></i> Add</a> -->
                   </div>
                   <h4><i class="fa fa-align-justify"></i> List Testimoni</h4>
                 </div>
