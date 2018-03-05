@@ -110,3 +110,11 @@ Route::post('user/remove', 'UIUserController@remove');
 Route::get('user/export', 'UIUserController@export');
 Route::get('user/datatables', 'UIUserController@datatables');
 Route::post('user/reset_password', 'UIUserController@reset_password');
+
+/* PEMBELIAN */
+Route::get('pembelian', 'UIPembelianController@index');
+Route::get('pembelian/add', 'UIPembelianController@add');
+Route::post('pembelian/add', 'UIPembelianController@save');
+Route::get('pembelian/view/{id?}', 'UIPembelianController@view');
+Route::get('pembelian/export', 'UIPembelianController@export');
+Route::get('pembelian/datatables', 'UIPembelianController@datatables');

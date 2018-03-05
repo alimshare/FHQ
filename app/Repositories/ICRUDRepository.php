@@ -18,7 +18,7 @@ interface ICRUDRepository
 	*	insert new record
 	*
 	*/	
-	public function insert(array $model);
+	public function insert(array $model, $return);
 	/**
 	*	update existing record
 	*

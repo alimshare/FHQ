@@ -16,12 +16,19 @@ class CRUDRepository implements ICRUDRepository
         return call_user_func([$this->modelClz,'find'],$id);
 	}
 
-	public function insert(array $model) {
+	public function insert(array $model, $return = false) {
         $_model = new $this->modelClz;
         foreach($model as $key=>$val){
             $_model->$key = $val;
         }
-        return $_model->save();
+
+        if ($return) {
+            $_model->save();
+            return $_model; // return model
+        } else {
+            return $_model->save(); // return insert status
+        }
+
 	}
 
 	public function update($id, array $model) {

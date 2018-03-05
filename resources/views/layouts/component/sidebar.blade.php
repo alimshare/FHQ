@@ -30,10 +30,10 @@
             <a class="nav-link" href="{{ url('peserta') }}"><i class="icon-people"></i> Peserta </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{{ url('infaq') }}"><i class="icon-calculator"></i> Infaq </a>
+            <a class="nav-link" href="{{ url('infaq/add') }}"><i class="icon-calculator"></i> Infaq </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" onclick="alert('coming soon')"><i class="fa fa-cart-plus"></i> Pembelian </a>
+            <a class="nav-link" href="{{ url('pembelian/add') }}"><i class="fa fa-cart-plus"></i> Pembelian </a>
           </li>
 
           <li class="divider"></li>

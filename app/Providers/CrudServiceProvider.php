@@ -19,6 +19,7 @@ class CrudServiceProvider extends ServiceProvider{
         $this->app->bind('App\Repositories\ITestimoniRepository',  'App\Repositories\impl\TestimoniRepository');
         $this->app->bind('App\Repositories\IBukuRepository',  'App\Repositories\impl\BukuRepository');
         $this->app->bind('App\Repositories\IUserRepository',  'App\Repositories\impl\UserRepository');
+        $this->app->bind('App\Repositories\IPembelianRepository',  'App\Repositories\impl\PembelianRepository');
         
     }
     
