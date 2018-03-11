@@ -35,6 +35,9 @@
           <li class="nav-item">
             <a class="nav-link" href="{{ url('pembelian/add') }}"><i class="fa fa-cart-plus"></i> Pembelian </a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url('laporan') }}"><i class="fa fa-print"></i> Laporan </a>
+          </li>
 
           <li class="divider"></li>
 

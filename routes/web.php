@@ -118,3 +118,7 @@ Route::post('pembelian/add', 'UIPembelianController@save');
 Route::get('pembelian/view/{id?}', 'UIPembelianController@view');
 Route::get('pembelian/export', 'UIPembelianController@export');
 Route::get('pembelian/datatables', 'UIPembelianController@datatables');
+
+/* LAPORAN */
+Route::get('laporan', 'UILaporanController@index');
+Route::get('laporan/jadwal', 'UILaporanController@showFormJadwal');
