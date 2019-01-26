@@ -106,7 +106,7 @@
   <script src="{{ url('/') }}/dist/vendors/js/pace.min.js"></script>
 
   <!-- Plugins and scripts required by all views -->
-  <script src="{{ url('/') }}/dist/vendors/js/Chart.min.js"></script>
+  <!-- <script src="{{ url('/') }}/dist/vendors/js/Chart.min.js"></script> -->
 
   <!-- CoreUI main scripts -->
 
@@ -117,19 +117,11 @@
   <!-- Custom scripts required by this view -->
   <script src="{{ url('/') }}/dist/js/views/main.js"></script>
 
-  <script src="{{ url('/') }}/dist/vendors/datatables/js/jquery.dataTables.js"></script>
-  <script src="{{ url('/') }}/dist/vendors/datatables/js/DataTablesBS4.js"></script>
-
   <!-- iCheck 1.0.1 -->
   <script src="{{ url('/') }}/dist/vendors/iCheck/icheck.min.js"></script>
 
   <script type="text/javascript">
       $(document).ready(function(){
-
-          if ($('.datatable').length > 0) {
-            $('.datatable').DataTable();
-          }
-
           //Flat red color scheme for iCheck
           $('input[type="checkbox"].flat-blue, input[type="radio"].flat-blue').iCheck({
               checkboxClass: 'icheckbox_square-blue',

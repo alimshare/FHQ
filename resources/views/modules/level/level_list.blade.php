@@ -76,7 +76,13 @@
 
 
 @section('footer-script')
+<script src="{{ url('/') }}/dist/vendors/datatables/js/jquery.dataTables.js"></script>
+<script src="{{ url('/') }}/dist/vendors/datatables/js/DataTablesBS4.js"></script>
       <script type="text/javascript">
+    
+    if ($('.datatable').length > 0) {
+      $('.datatable').DataTable();
+    }
 
         $(function(){
           $('.table').DataTable({

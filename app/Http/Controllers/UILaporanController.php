@@ -26,12 +26,13 @@ class UILaporanController extends Controller
     }
 
     public function showFormJadwal(){
-        $listKelas = $this->crudKelas->all();
-        $ids = array();
-        foreach ($listKelas as $key => $value) {
-            $value['peserta'] = $this->crudKelas->getListPeserta($value->id);
-        }
-		return $this->showPDF('modules.laporan.laporan_jadwal', array('data'=>$listKelas), 'jadwal.pdf','');
+        // $listKelas = $this->crudKelas->all();
+        // $ids = array();
+        // foreach ($listKelas as $key => $value) {
+        //     $value['peserta'] = $this->crudKelas->getListPeserta($value->id);
+        // }
+        // return $this->showPDF('modules.laporan.laporan_jadwal', array('data'=>$listKelas), 'jadwal.pdf','');
+        return 'coming soon';
     }
 
 
